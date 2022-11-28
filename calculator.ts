@@ -1,5 +1,7 @@
-// Podemos definir específicamente el tipo de valor que debe ser pasada a la función
-const calculator = (a: number, b: number, operation: "add" | "substract" | "multiply" | "divide") => {
+// En typescript podemos crear nuestros propios tipos
+type Operation = "add" | "substract" | "multiply" | "divide"
+
+const calculator = (a: number, b: number, operation: Operation) => {
     if (operation == "add") return a+b
 
     if (operation == "substract") return a-b
