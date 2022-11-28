@@ -4,14 +4,14 @@ type Result = number
 
 // Podemos especificar también qué esperamos que devuelva la función
 const calculator = (a: number, b: number, operation: Operation): Result => {
-    if (operation == "add") return a+b
+    if (operation === "add") return a+b
 
-    if (operation == "substract") return a-b
+    if (operation === "substract") return a-b
 
-    if (operation == "multiply") return a*b
+    if (operation === "multiply") return a*b
 
-    if (operation == "divide") {
-        if (b == 0) throw new Error("Cannot divide by 0")
+    if (operation === "divide") {
+        if (b === 0) throw new Error("Cannot divide by 0")
         return a/b
     }
 
