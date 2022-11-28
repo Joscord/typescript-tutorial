@@ -1,11 +1,6 @@
-const operations = ["add", "substract", "multiply", "divide"]
-
-const calculator = (a: number, b: number, operation: string) => {
-    if (!operations.includes(operation)) {
-        console.log("operation not defined")
-    }
-
-    if (operation == "add") return a*b
+// Podemos definir específicamente el tipo de valor que debe ser pasada a la función
+const calculator = (a: number, b: number, operation: "add" | "substract" | "multiply" | "divide") => {
+    if (operation == "add") return a+b
 
     if (operation == "substract") return a-b
 
@@ -17,4 +12,4 @@ const calculator = (a: number, b: number, operation: string) => {
     }
 }
 
-calculator(3, 4, "add")
+console.log(calculator(3, 4, "divide"))
